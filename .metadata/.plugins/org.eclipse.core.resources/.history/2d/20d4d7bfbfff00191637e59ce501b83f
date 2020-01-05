@@ -1,0 +1,34 @@
+package studytime;
+
+import java.util.Stack;
+
+public class stack {
+
+	public static void main(String[] args) {
+		Stack<Integer> stack = new Stack<>();
+		Integer[] stack2 = new Integer[10];
+		int idx = 0;
+		
+		stack2 = push(stack2,1,idx++);
+		stack2 = push(stack2,3,idx++);
+		for(Integer i : stack2) {
+			if(i==null) break;
+			System.out.println(i+" ");
+		}
+		System.out.println();
+		
+		stack2 = pop(stack2, --idx);
+	}
+
+	private static Integer[] pop(Integer[] stack2, int idx) {
+		if(idx<0) throw new Exception("StackUnderFlow ¹ß»ý");
+		stack2[idx] = null;
+		return stack2;
+	}
+
+	private static Integer[] push(Integer[] stack2, int i , int idx) {
+		stack2[idx] = i;
+		return stack2;
+	}
+	
+}

@@ -1,0 +1,19 @@
+package programmers;
+
+import java.util.Arrays;
+
+public class telephone {
+    public boolean solution(String[] phone_book) {
+        boolean answer = true;
+        Arrays.sort(phone_book);
+        String[] phone = new String[] {};
+        for(String b : phone_book) {
+        	System.out.println(b);
+        }
+        
+        
+        
+        
+        return answer;
+    }
+}

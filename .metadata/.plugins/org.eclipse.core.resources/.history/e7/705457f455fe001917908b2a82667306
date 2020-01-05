@@ -1,0 +1,12 @@
+package str_study;
+
+import java.util.Scanner;
+
+public class b_11720 {
+	public static void main(String[] args) {
+		Scanner scan = new Scanner(System.in);
+		int numcnt = scan.nextInt();
+		int sum = 0;
+
+	}
+}

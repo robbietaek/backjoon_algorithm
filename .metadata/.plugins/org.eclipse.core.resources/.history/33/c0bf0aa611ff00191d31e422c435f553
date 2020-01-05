@@ -1,0 +1,29 @@
+package programmers;
+
+import java.util.Arrays;
+
+public class telephone {
+	public boolean solution(String[] phone_book) {
+		boolean answer = true;
+		String temp = "";
+
+		for (int i = 0; i < phone_book.length - 1; i++) {
+			if (Integer.parseInt(phone_book[i]) > Integer.parseInt(phone_book[i + 1])) {
+				temp = phone_book[i + 1];
+				phone_book[i + 1] = phone_book[i];
+				phone_book[i] = temp;
+			}
+		}
+		
+		for(int i = 1; i<phone_book.length;i++) {
+			if(phone_book[0].equals(phone_book[i+1].substring(0,phone_book[0].length()))) {
+				answer = false;
+				break;
+			}else {
+				answer = true;
+			}
+		}
+		
+		return answer;
+	}
+}

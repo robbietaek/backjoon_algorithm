@@ -1,0 +1,10 @@
+package programmers;
+
+import java.util.Arrays;
+
+public class telephone {
+	public boolean solution(String[] phone_book) {
+		boolean answer = true;
+		return answer;
+	}
+}

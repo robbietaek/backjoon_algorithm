@@ -1,0 +1,45 @@
+package stack_study;
+
+import java.util.Scanner;
+import java.util.Stack;
+
+public class b_1874 {
+
+	public static void main(String[] args) {
+
+		Scanner scan = new Scanner(System.in);
+		int cnt = scan.nextInt();
+		Stack<Integer> stack = new Stack<>();
+		int sum = 0;
+		
+		for(int j = 0; j<cnt; j++) {
+			if(j==0) {
+				int n = scan.nextInt();
+				for(int i=0;i<n;i++) {
+					stack.push(++sum);
+					System.out.println("+");
+				}
+				stack.pop();
+				sum--;
+				System.out.println("-");
+			}else {
+				int m = scan.nextInt();
+				
+				if (m>sum) {
+					for(int k = sum; k<m;k++) {
+						stack.push(++sum);
+						System.out.println("+");
+					}
+					stack.pop();
+					sum--;
+					System.out.println("-");
+				}else if(m<=sum){
+					stack.pop();
+					sum--;
+					System.out.println("-");
+				}
+			}
+		}
+	}
+
+}

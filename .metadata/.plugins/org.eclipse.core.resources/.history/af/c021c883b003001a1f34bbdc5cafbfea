@@ -1,0 +1,61 @@
+package stack_study;
+
+import java.util.LinkedList;
+import java.util.Queue;
+import java.util.Scanner;
+import java.util.Stack;
+
+public class b_1874 {
+
+	public static void main(String[] args) {
+
+		Scanner scan = new Scanner(System.in);
+		int cnt = scan.nextInt();
+		Stack<Integer> stack = new Stack<>();
+		Queue<String> queue = new LinkedList<String>();
+		int max = 0;
+		for (int i = 0; i < cnt; i++) {
+			int n = scan.nextInt();
+			
+			if (i == 0) {
+				for (int j = 1; j <= n; j++) {
+					stack.push(j);
+					queue.add("+");
+				}
+				max = n;
+				stack.pop();
+				queue.add("-");
+			} else {
+				
+				
+				if (stack.empty()) {
+					for (int d = max; d < n; d++) {
+						stack.push(d + 1);
+						queue.add("+");
+					}
+					max = n;
+					stack.pop();
+					queue.add("-");
+				} else if (stack.peek()>=n) {
+					stack.pop();
+					queue.add("-");
+					
+				} else {
+					for (int k = max; k < n; k++) {
+						stack.push(k + 1);
+						queue.add("+");
+					}
+					max = n;
+					stack.pop();
+					queue.add("-");
+				}
+			}
+			
+		}
+		for (String s : queue) {
+			System.out.println(s);
+		}
+
+	}
+
+}

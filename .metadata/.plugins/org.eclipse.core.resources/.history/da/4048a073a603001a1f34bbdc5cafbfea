@@ -1,0 +1,32 @@
+package stack_study;
+
+import java.util.LinkedList;
+import java.util.Queue;
+import java.util.Scanner;
+import java.util.Stack;
+
+public class b_1874 {
+
+	public static void main(String[] args) {
+
+		Scanner scan = new Scanner(System.in);
+		int cnt = scan.nextInt();
+		Stack<Integer> stack = new Stack<>();
+		
+		while(cnt-->0) {
+			
+			if(cnt==7) {
+				int n = scan.nextInt();
+				for(int i=1;i<=n;i++) {
+					stack.push(i);
+				}
+			}
+			
+			
+			
+			
+			
+		}
+	}
+
+}
